@@ -9,11 +9,16 @@ public class MyWorld extends World {
     public int score = 0;
     Label scoreLabel;
     
+
     /**
      * Constructor for objects of class MyWorld.
      */
     public MyWorld() {
         super(600, 400, 1, false);
+        
+        GreenfootImage bg = new GreenfootImage("background2.png");
+        bg.scale(getWidth(), getHeight());
+        setBackground(bg);
         
         // Create the elephant object
         Elephant elephant = new Elephant();
