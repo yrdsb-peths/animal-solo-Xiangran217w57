@@ -14,6 +14,7 @@ public class Elephant extends Actor
     
     //Direction the elephant is facing
     String facing = "right";
+    SimpleTimer animationTimer = new SimpleTimer();
     
     
     /** 
@@ -33,6 +34,10 @@ public class Elephant extends Actor
             idleLeft[i].mirrorHorizontally();
             idleLeft[i].scale(100, 100);
         }
+        
+
+        animationTimer.mark();
+  
         //Initial elephant image
         setImage(idleRight[0]);
     }
@@ -42,6 +47,12 @@ public class Elephant extends Actor
     int imageIndex = 0;
     public void animateElephant()
     {
+        if(animationTimer.millisElapsed() < 1000)
+        {
+            return;
+        }
+        animationTimer.mark();
+        
         if(facing.equals("right"))
         {
             setImage(idleRight[imageIndex]);
@@ -58,11 +69,13 @@ public class Elephant extends Actor
         // Add your action code here.
         if(Greenfoot.isKeyDown("left"))
         {
-            move(-1);
+            move(-2);
+            facing = "left";
         }
         else if(Greenfoot.isKeyDown("right"))
         {
-            move(1);
+            move(2);
+            facing = "right";
         }
         
         //Remove apple if elephant eats it
