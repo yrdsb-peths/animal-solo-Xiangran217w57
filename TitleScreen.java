@@ -43,30 +43,26 @@ public class TitleScreen extends World
         Elephant elephant = new Elephant();
         addObject(elephant,408,150);
         elephant.setLocation(523,71);
-        Label label = new Label("Press <space> to Start", 40);
+        Label label = new Label("Use \u2190 and \u2192 to Move", 40);
+        addObject(label,220,257);
+        label.setLocation(297,243);
+        label.setLocation(305,240);
+
+        Label labe2 = new Label("Press <space> to Start", 40);
         addObject(label,310,299);
-        label.setLocation(362,281);
-        label.setLocation(275,284);
-        label.setLocation(305,295);
-        Label2 label2 = new Label2("Use <-- and --> to Move", 40);
-        addObject(label2,291,250);
-        elephant.setLocation(558,126);
-        elephant.setLocation(515,129);
-        label2.setLocation(334,213);
-        label2.setLocation(313,260);
-        label2.setLocation(300,248);
-        label.setLocation(294,299);
-        elephant.setLocation(523,122);
-        label.setLocation(284,301);
-        label.setLocation(249,287);
-        label.setLocation(277,295);
-        label2.setLocation(208,217);
-        label2.setLocation(332,213);
-        label2.setLocation(272,230);
-        label2.setLocation(290,224);
-        label2.setLocation(298,224);
-        label.setLocation(247,303);
-        label.setLocation(271,293);
-        elephant.setLocation(506,101);
+        labe2.setLocation(362,281);
+        labe2.setLocation(275,284);
+        labe2.setLocation(305,295);
+
+        Label label2 = new Label("Press <space> to Start", 40);
+        addObject(label2,241,309);
+        label2.setLocation(316,301);
+        elephant.setLocation(496,118);
+        label.setLocation(381,218);
+        label.setLocation(289,251);
+        label2.setLocation(233,300);
+        label2.setLocation(287,304);
+        label2.setLocation(260,294);
+        label2.setLocation(262,302);
     }
 }
